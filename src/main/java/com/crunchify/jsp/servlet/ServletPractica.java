@@ -44,6 +44,7 @@ public class ServletPractica extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        
         response.setContentType("text/plain");
         PrintWriter out = response.getWriter();
         DAOEstudiante daoEstudiante = new DAOEstudiante();

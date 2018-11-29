@@ -203,7 +203,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#RegistrarP').click(function (event) {
-                    alert("oprimiste");
+                    
                     var id = $('#idP').val();
                     var nombre = $('#nombreP').val();
                     var apellido = $('#apellidoP').val();
@@ -212,6 +212,7 @@
                     var pais = $('#pais').val();
                     var descript = $('#descripcion').val();
                     var regis = $('#RegistrarP').val();
+                    alert("oprimiste");
                     $.post('Repaso', {
                         id: id,
                         nombre: nombre,
