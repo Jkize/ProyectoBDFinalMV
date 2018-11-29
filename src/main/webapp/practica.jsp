@@ -262,12 +262,12 @@
         <%
        if(request.getAttribute("paises")!=null){            
        List<Pais> pais  = (List<Pais>)request.getAttribute("paises");  
-        for(int i=0; i<escuelas.size(); i++){
+        for(int i=0; i<pais.size(); i++){
  
         %>
 
         <script>
-            document.getElementById("pais").options[<%=i%>] = new Option(<%=pais.get(i).getNombre()%>,<%=pais.getId()%>);
+            document.getElementById("pais").options[<%=i%>] = new Option(<%=pais.get(i).getNombre()%>,<%=pais.get(i).getId()%>);
         </script>
 
         <%
