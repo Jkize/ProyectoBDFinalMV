@@ -46,8 +46,7 @@ public class ServletPractica extends HttpServlet {
 
         
         response.setContentType("text/plain");
-        PrintWriter out = response.getWriter();
-        DAOEstudiante daoEstudiante = new DAOEstudiante();
+        PrintWriter out = response.getWriter(); 
         String BRegistrar = request.getParameter("BRegistrar");
         String id = request.getParameter("id");
         String nombre = request.getParameter("nombre");

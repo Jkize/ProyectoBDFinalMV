@@ -60,7 +60,7 @@ public class DAOPersona {
 
     public List<Persona> obPersonas() {
         List<Persona> personas = new ArrayList<Persona>();
-        String query = "SELECT * FROM Persona;";
+        String query = "SELECT * FROM Persona JOIN Pais on(Persona.pais=Pais.codigo);";
         Connection connection = null;
         try {
             connection = Conexion.getConnection();
@@ -86,7 +86,7 @@ public class DAOPersona {
             preparedStmt.close();
 
         } catch (SQLException e) {
-            System.out.println("Problemas al obtener la lista de Departamentos");
+            System.out.println("Problemas al obtener la lista de Estudiantes");
             e.printStackTrace();
         }
 
