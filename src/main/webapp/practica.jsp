@@ -240,7 +240,6 @@
             $(document).ready(function () {
                 $('#BuscarA').click(function (event) {
                     var id = $('#idP1').val();
-
                     $.post('Repaso', {
                         id: id
                     }, function (responseText) {

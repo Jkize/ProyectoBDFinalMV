@@ -33,7 +33,7 @@
     
     <servlet-mapping>
         <servlet-name>Repaso</servlet-name>
-        <url-pattern>/Quiz</url-pattern>
+        <url-pattern>/Repaso</url-pattern>
     </servlet-mapping>
 
 </web-app>
