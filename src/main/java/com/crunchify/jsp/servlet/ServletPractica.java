@@ -36,8 +36,7 @@ public class ServletPractica extends HttpServlet {
         DAOPais daopais = new DAOPais();
         List<Pais> paises = daopais.findAllByEscuela();
         request.setAttribute("paises", paises);
-
-        System.out.println("Tamaño del Arreglo "+paises.size());
+        //Redireccionando la informacion
         RequestDispatcher redireccion = request.getRequestDispatcher("practica.jsp");
         redireccion.forward(request, response);
 

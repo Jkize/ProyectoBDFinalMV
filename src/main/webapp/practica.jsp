@@ -266,7 +266,7 @@
  
         %>
 
-        alert("holamundi");
+        <h1> <%=pais.get(i).getNombre()%> </h>
         <script>
             document.getElementById("pais").options[<%=i%>] = new Option(<%=pais.get(i).getNombre()%>,<%=pais.get(i).getId()%>);
         </script>
