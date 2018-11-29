@@ -191,7 +191,7 @@
                     data: json.dat,
                     destroy: true,
                     empty: true,
-                    columns: json.col
+                    columns: json.col.col2
                 });
             }
 

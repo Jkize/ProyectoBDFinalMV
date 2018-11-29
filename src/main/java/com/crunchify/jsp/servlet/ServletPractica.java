@@ -82,7 +82,7 @@ public class ServletPractica extends HttpServlet {
                         matrix.put(fila);
                     }
                     jsonOb.put("dat", matrix);
-                    String h = "[{\"title\":\"Identificacion\"},{\"title\":\"Nombre\"},{\"title\":\"Apellido\"},{\"title\":\"fecha Nacimiento\"},{\"title\":\"Sexo\"},{\"title\":\"Pais\"},{\"title\":\"Descripcion\"}] ";
+                    String h = "{ \"col2\":  [{\"title\":\"Identificacion\"},{\"title\":\"Nombre\"},{\"title\":\"Apellido\"},{\"title\":\"fecha Nacimiento\"},{\"title\":\"Sexo\"},{\"title\":\"Pais\"},{\"title\":\"Descripcion\"}]} ";
 
                     jsonOb.put("col", new JSONObject(h));
                     out.println(jsonOb);
