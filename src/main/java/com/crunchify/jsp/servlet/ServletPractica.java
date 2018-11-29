@@ -30,7 +30,7 @@ import org.json.*;
  *
  * @author Jhoan Saavedra
  */
-public class ServlectPractica {
+public class ServletPractica {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
