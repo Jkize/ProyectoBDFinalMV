@@ -277,8 +277,8 @@
         <h1> <%=pais.get(i).getNombre()%> </h>
         <script>
             option = document.createElement("option");
-            option.value = <%=pais.get(i).getId()%>;
-            option.text = <%=pais.get(i).getNombre()%>;
+            option.value = "<%=pais.get(i).getId()%>";
+            option.text = "<%=pais.get(i).getNombre()%>";
             select.appendChild(option);
 
         </script>
@@ -289,13 +289,7 @@
             
         %>
 
-        select = document.getElementById("año");
-        for(i = 2000; i <= 2050; i++){
-        option = document.createElement("option");
-        option.value = i;
-        option.text = i;
-        select.appendChild(option);
-        }
+
 
     </div>
 
