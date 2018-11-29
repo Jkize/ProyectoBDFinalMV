@@ -4,15 +4,13 @@
  * and open the template in the editor.
  */
 package edu.co.sergio.mundo.dao;
-
-import edu.co.sergio.mundo.vo.Escuela;
+ 
 import edu.co.sergio.mundo.vo.Estudiante;
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.SQLException; 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;

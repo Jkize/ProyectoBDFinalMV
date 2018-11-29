@@ -22,13 +22,19 @@
             <version>3.1.1</version>
         </dependency>	
         
-		<!-- JDBC Driver -->
-		<dependency>
-    		<groupId>postgresql</groupId>
-    		<artifactId>postgresql</artifactId>
-    		<version>9.0-801.jdbc4</version>
-		</dependency>
+        <!-- JDBC Driver -->
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.0-801.jdbc4</version>
+        </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180813</version>
+        </dependency>
 
                 
     </dependencies>
@@ -48,31 +54,31 @@
             </plugin>
             <!-- The maven app assembler plugin will generate a script that sets up the classpath and runs your project -->
             <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>appassembler-maven-plugin</artifactId>
-            <version>1.1.1</version>
-            <configuration>
-                <assembleDirectory>target</assembleDirectory>
-                <programs>
-                    <program>
-                        <mainClass>MainGlassfish</mainClass>
-                        <name>webapp</name>
-                    </program>
-                </programs>
-            </configuration>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>assemble</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>appassembler-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <configuration>
+                    <assembleDirectory>target</assembleDirectory>
+                    <programs>
+                        <program>
+                            <mainClass>MainGlassfish</mainClass>
+                            <name>webapp</name>
+                        </program>
+                    </programs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>assemble</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
                 	
         </plugins>
     </build>
-	<repositories>
+    <repositories>
         <repository>
             <id>java.net</id>
             <url>http://download.java.net/maven/glassfish</url>
@@ -85,5 +91,9 @@
         </pluginRepository>
     </pluginRepositories>
     <name>petcatalogGlassFish</name>
+    
+    
+    
+    
 </project>
 
