@@ -203,6 +203,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#RegistrarP').click(function (event) {
+                    alert("oprimiste");
                     var id = $('#idP').val();
                     var nombre = $('#nombreP').val();
                     var apellido = $('#apellidoP').val();
