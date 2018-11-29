@@ -19,19 +19,21 @@
         <servlet-class>com.crunchify.jsp.servlet.ServletEscuela</servlet-class>
     </servlet>
     
-    <servlet>
-        <servlet-name>Repaso</servlet-name>
-        <servlet-class>com.crunchify.jsp.servlet.ServletPractica</servlet-class>
-    </servlet>
-    
+ 
     <servlet-mapping>
         <servlet-name>Escuela</servlet-name>
         <url-pattern>/Escuela</url-pattern>
     </servlet-mapping>
     
+       <servlet>
+        <servlet-name>Repaso</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletPractica</servlet-class>
+       
+    </servlet>
+    
     <servlet-mapping>
         <servlet-name>Repaso</servlet-name>
-        <url-pattern>/Repaso</url-pattern>
+        <url-pattern>/Quiz</url-pattern>
     </servlet-mapping>
 
 </web-app>
