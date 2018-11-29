@@ -207,7 +207,8 @@
                     var id = $('#idP').val();
                     var nombre = $('#nombreP').val();
                     var apellido = $('#apellidoP').val();
-                    var fecha = $('#fecha_N').val();
+                    var fecha = new Date($('#fecha_N').val());
+                    alert(fecha);
                     var sexo = $('input:radio[name=sexo]:checked').val();
                     var pais = $('#pais').val();
                     var descript = $('#descripcion').val();
