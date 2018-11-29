@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+         pageEncoding="ISO-8859-1"%>
 <%@ page import="edu.co.sergio.mundo.vo.*"%>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
@@ -209,8 +209,8 @@
                     var fecha = $('#fecha_N').val();
                     var sexo = $('input:radio[name=sexo]:checked').val();
                     var pais = $('#pais').val();
-                    var descript=$('#descripcion').val();
-                    var regis= $('#RegistrarP').val();
+                    var descript = $('#descripcion').val();
+                    var regis = $('#RegistrarP').val();
                     $.post('Repaso', {
                         id: id,
                         nombre: nombre,
@@ -218,8 +218,8 @@
                         fecha: fecha.getTime(),
                         sexo: sexo,
                         pais: pais,
-                        BRegistrar:regis,
-                        descripcion:descript
+                        BRegistrar: regis,
+                        descripcion: descript
                     }, function (responseText) {
                         var fc = JSON.parse(responseText);
 
@@ -261,14 +261,26 @@
 
         <%
        if(request.getAttribute("paises")!=null){            
-       List<Pais> pais  = (List<Pais>)request.getAttribute("paises");  
-        for(int i=0; i<pais.size(); i++){
+       List<Pais> pais  = (List<Pais>)request.getAttribute("paises"); 
+       
+        %>
+
+        <script>
+            select = document.getElementById("pais");
+        </script>
+
+        <%
+         for(int i=0; i<pais.size(); i++){
  
         %>
 
         <h1> <%=pais.get(i).getNombre()%> </h>
         <script>
-            document.getElementById("pais").options[<%=i%>] = new Option(<%=pais.get(i).getNombre()%>,<%=pais.get(i).getId()%>);
+            option = document.createElement("option");
+            option.value = <%=pais.get(i).getId()%>;
+            option.text = <%=pais.get(i).getNombre()%>;
+            select.appendChild(option);
+
         </script>
 
         <%
@@ -276,6 +288,14 @@
           }
             
         %>
+
+        select = document.getElementById("año");
+        for(i = 2000; i <= 2050; i++){
+        option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        select.appendChild(option);
+        }
 
     </div>
 
