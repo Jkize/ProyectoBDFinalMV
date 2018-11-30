@@ -25,7 +25,7 @@ public class DAOExercises {
 
     public List<Exercise> findAllByEscuela(String name) {
         List<Exercise> exercises = new ArrayList<Exercise>();
-        String query = "SELECT RESULTS.CAT, RESULTS.ENO, ROUND(AVG(RESULTS.POINTS),2) FROM RESULTS,(SELECT CAT,ENO FROM Exercises WHERE TOPIC='"+name+"')AS T WHERE T.CAT=RESULTS.CAT AND T.ENO=RESULTS.ENO GROUP BY (RESULTS.CAT,RESULTS.ENO);";
+        String query = "SELECT RESULTS.CAT AS CAT, RESULTS.ENO AS ENO, ROUND(AVG(RESULTS.POINTS),2) AS ROUNDED FROM RESULTS,(SELECT CAT,ENO FROM Exercises WHERE TOPIC='"+name+"')AS T WHERE T.CAT=RESULTS.CAT AND T.ENO=RESULTS.ENO GROUP BY (RESULTS.CAT,RESULTS.ENO);";
         Connection connection = null;
         try {
             connection = Conexion.getConnection();
@@ -38,7 +38,7 @@ public class DAOExercises {
             int id = 0;
 
             while (rs.next()) {
-                Exercise ex = new Exercise(rs.getString("cat").charAt(0), rs.getInt("eno"), name, rs.getDouble("rounded"));
+                Exercise ex = new Exercise(rs.getString("CAT").charAt(0), rs.getInt("ENO"), name, rs.getDouble("ROUNDED"));
                 exercises.add(ex);
             }
             st.close();
