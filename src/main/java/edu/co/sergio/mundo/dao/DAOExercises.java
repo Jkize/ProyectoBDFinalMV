@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package edu.co.sergio.mundo.dao;
- 
-import edu.co.sergio.mundo.vo.Exercise; 
+
+import edu.co.sergio.mundo.vo.Exercise;
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -25,27 +25,23 @@ public class DAOExercises {
 
     public List<Exercise> findAllByEscuela(String name) {
         List<Exercise> exercises = new ArrayList<Exercise>();
-        String query = "SELECT RESULTS.CAT, RESULTS.ENO, ROUND(AVG(RESULTS.POINTS),2) FROM RESULTS,(SELECT CAT,ENO FROM Exercises WHERE TOPIC= ?)AS T WHERE T.CAT=RESULTS.CAT AND T.ENO=RESULTS.ENO GROUP BY (RESULTS.CAT,RESULTS.ENO);";
+        String query = "SELECT RESULTS.CAT, RESULTS.ENO, ROUND(AVG(RESULTS.POINTS),2) FROM RESULTS,(SELECT CAT,ENO FROM Exercises WHERE TOPIC='"+name+"')AS T WHERE T.CAT=RESULTS.CAT AND T.ENO=RESULTS.ENO GROUP BY (RESULTS.CAT,RESULTS.ENO);";
         Connection connection = null;
         try {
             connection = Conexion.getConnection();
         } catch (URISyntaxException ex) {
-            Logger.getLogger(DAOEstudiante.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(DAOEscuela.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
-            PreparedStatement preparedStmt = null;
-            preparedStmt = connection.prepareStatement(query);
-            preparedStmt.setString(1, "name");
-            ResultSet rs = preparedStmt.executeQuery();
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(query);
             int id = 0;
-            String nombre = null, escuela = null;
 
             while (rs.next()) {
-
                 Exercise ex = new Exercise(rs.getString("cat").charAt(0), rs.getInt("eno"), name, rs.getDouble("rounded"));
                 exercises.add(ex);
             }
-            preparedStmt.close();
+            st.close();
 
         } catch (SQLException e) {
             System.out.println("Problemas al obtener la lista de Departamentos");
