@@ -47,13 +47,13 @@
                 <div class="row">
                     <div class="col-sm-8">
 
-                        <h3> <label style="color:blue">Persona</label></h3>
+                        <h3> <label style="color:blue">PARCIAL</label></h3>
 
                         <br>
                         <div class="row">
 
                             <div class="col-sm-4">
-                                <div>Pais</div>
+                                <div>Nombre TOPIC</div>
                                 <select name="topic" id="topic">
 
                                 </select>
@@ -73,6 +73,8 @@
 
                 </div>
 
+                <br>
+                <br>
                 <div class="row">
                     <div class="col-sm-12">
                         <label>Tabla:</label>
