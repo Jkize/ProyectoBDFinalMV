@@ -113,7 +113,7 @@
                     var pais = $('#topic').val();
 
                     alert("oprimiste");
-                    $.post('Repaso', {
+                    $.post('Parcial', {
                         topic: pais
                     }, function (responseText) {
                         var fc = JSON.parse(responseText);
