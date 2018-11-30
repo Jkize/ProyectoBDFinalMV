@@ -25,8 +25,7 @@ public class DAOExercises {
 
     public List<Exercise> findAllByEscuela(String name) {
         List<Exercise> exercises = new ArrayList<Exercise>();
-        String query = "SELECT RESULTS.CAT, RESULTS.ENO, ROUND(AVG(RESULTS.POINTS),2) FROM RESULTS,(SELECT CAT,ENO FROM Exercises WHERE TOPIC='SQL')AS T WHERE T.CAT=RESULTS.CAT AND T.ENO=RESULTS.ENO GROUP BY (RESULTS.CAT,RESULTS.ENO)\n"
-                + "";
+        String query = "SELECT RESULTS.CAT, RESULTS.ENO, ROUND(AVG(RESULTS.POINTS),2) FROM RESULTS,(SELECT CAT,ENO FROM Exercises WHERE TOPIC= ?)AS T WHERE T.CAT=RESULTS.CAT AND T.ENO=RESULTS.ENO GROUP BY (RESULTS.CAT,RESULTS.ENO);";
         Connection connection = null;
         try {
             connection = Conexion.getConnection();
