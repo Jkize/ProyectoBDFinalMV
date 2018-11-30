@@ -38,7 +38,8 @@ public class DAOExercises {
             int id = 0;
 
             while (rs.next()) {
-                Exercise ex = new Exercise(rs.getString("CAT").charAt(0), rs.getInt("ENO"), name, rs.getDouble("ROUNDED"));
+                System.out.println("CICLO");
+                Exercise ex = new Exercise(rs.getString("cat").charAt(0), rs.getInt("eno"), name, rs.getDouble("rounded"));
                 exercises.add(ex);
             }
             st.close();
