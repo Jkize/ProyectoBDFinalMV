@@ -111,8 +111,7 @@
                 $('#promedio').click(function (event) {
 
                     var pais = $('#topic').val();
-
-                    alert("oprimiste");
+ 
                     $.post('Parcial', {
                         topic: pais
                     }, function (responseText) {
