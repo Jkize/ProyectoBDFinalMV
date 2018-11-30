@@ -12,6 +12,7 @@
         <welcome-file>default.htm</welcome-file>
         <welcome-file>default.jsp</welcome-file>
         <welcome-file>practica.jsp</welcome-file>
+                <welcome-file>parcial.jsp</welcome-file>
     </welcome-file-list>
        
     <servlet>
@@ -35,5 +36,16 @@
         <servlet-name>Repaso</servlet-name>
         <url-pattern>/Repaso</url-pattern>
     </servlet-mapping>
+    
+      <servlet>
+        <servlet-name>Parcial</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletParcial</servlet-class>       
+    </servlet>
+    
+     <servlet-mapping>
+        <servlet-name>Parcial</servlet-name>
+        <url-pattern>/Parcial</url-pattern>
+    </servlet-mapping>
+    
 
 </web-app>
