@@ -49,7 +49,7 @@ public class ServletParcial extends HttpServlet {
 
                 DAOExercises daoExer = new DAOExercises();
                 System.out.println(topic);
-                List<Exercise> topics = daoExer.findAllByEscuela("SQL");
+                List<Exercise> topics = daoExer.findAllByEscuela(topic.trim());
                 System.out.println("Tamaño Arreglo "+topics.size());
                 
                 JSONObject jsonOb = new JSONObject();
