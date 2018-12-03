@@ -483,8 +483,8 @@
                                                             </thead>
                                                             <tbody>
                                                                 <%
-                                                                    if (request.getAttribute("listaEmpleados") != null) {
-                                                                        List<Empleado> empleados = (ArrayList<Empleado>) request.getAttribute("listaEmpleados");
+                                                                    if (request.getAttribute("empleado") != null) {
+                                                                        List<Empleado> empleados = (ArrayList<Empleado>) request.getAttribute("empleado");
                                                                         for (int i = 0; i < empleados.size(); i++) {
                                                                             Empleado empleado = (Empleado) empleados.get(i);
                                                                 %>
@@ -623,8 +623,8 @@
                                                             <tbody>
                                                             <tbody>
                                                                 <%
-                                                                    if (request.getAttribute("listaEmpleados") != null) {
-                                                                        ArrayList empleados = (ArrayList<Empleado>) request.getAttribute("listaEmpleados");
+                                                                    if (request.getAttribute("empleado") != null) {
+                                                                        ArrayList empleados = (ArrayList<Empleado>) request.getAttribute("empleado");
                                                                         for (int i = 0; i < empleados.size(); i++) {
                                                                             Empleado empleado = (Empleado) empleados.get(i);
                                                                 %>
