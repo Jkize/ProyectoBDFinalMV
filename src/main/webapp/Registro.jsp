@@ -484,7 +484,7 @@
                                                             <tbody>
                                                                 <%
                                                                     if (request.getAttribute("listaEmpleados") != null) {
-                                                                        ArrayList empleados = (ArrayList<Empleado>) request.getAttribute("listaEmpleados");
+                                                                        List<Empleado> empleados = (ArrayList<Empleado>) request.getAttribute("listaEmpleados");
                                                                         for (int i = 0; i < empleados.size(); i++) {
                                                                             Empleado empleado = (Empleado) empleados.get(i);
                                                                 %>
