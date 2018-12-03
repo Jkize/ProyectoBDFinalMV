@@ -1,51 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-    version="3.0">
-    <display-name>CrunchifyJSPServletExample</display-name>
-    <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
-        <welcome-file>index.htm</welcome-file>
-        <welcome-file>index.jsp</welcome-file>
-        <welcome-file>default.html</welcome-file>
-        <welcome-file>default.htm</welcome-file>
-        <welcome-file>default.jsp</welcome-file>
-        <welcome-file>practica.jsp</welcome-file>
-                <welcome-file>parcial.jsp</welcome-file>
-    </welcome-file-list>
-       
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>Escuela</servlet-name>
-        <servlet-class>com.crunchify.jsp.servlet.ServletEscuela</servlet-class>
+        <servlet-name>ServletTest</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletTest</servlet-class>
     </servlet>
-    
- 
+    <servlet>
+        <servlet-name>ServletActividad</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletActividad</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletAdministrador</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletAdministrador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletAsignacionTurnos</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletAsignacionTurnos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletBusquedas</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletBusquedas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletEmpresas</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletEmpresas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletLogin</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletRegistro</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletRegistro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletServidoresCategorias</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletServidoresCategorias</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletActividadOp</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletActividadOp</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletInformeSemanal</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletInformeSemanal</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletInformeMensual</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletInformeMensual</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletCargaMActividades</servlet-name>
+        <servlet-class>com.crunchify.jsp.servlet.ServletCargaMActividades</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>Escuela</servlet-name>
-        <url-pattern>/Escuela</url-pattern>
+        <servlet-name>ServletTest</servlet-name>
+        <url-pattern>/ServletTest</url-pattern>
     </servlet-mapping>
-    
-       <servlet>
-        <servlet-name>Repaso</servlet-name>
-        <servlet-class>com.crunchify.jsp.servlet.ServletPractica</servlet-class>
-       
-    </servlet>
-    
     <servlet-mapping>
-        <servlet-name>Repaso</servlet-name>
-        <url-pattern>/Repaso</url-pattern>
+        <servlet-name>ServletAdministrador</servlet-name>
+        <url-pattern>/ServletAdministrador</url-pattern>
     </servlet-mapping>
-    
-      <servlet>
-        <servlet-name>Parcial</servlet-name>
-        <servlet-class>com.crunchify.jsp.servlet.ServletParcial</servlet-class>       
-    </servlet>
-    
-     <servlet-mapping>
-        <servlet-name>Parcial</servlet-name>
-        <url-pattern>/Parcial</url-pattern>
+    <servlet-mapping>
+        <servlet-name>ServletAsignacionTurnos</servlet-name>
+        <url-pattern>/ServletAsignacionTurnos</url-pattern>
     </servlet-mapping>
-    
-
+    <servlet-mapping>
+        <servlet-name>ServletBusquedas</servlet-name>
+        <url-pattern>/ServletBusquedas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletEmpresas</servlet-name>
+        <url-pattern>/ServletEmpresas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletLogin</servlet-name>
+        <url-pattern>/ServletLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletRegistro</servlet-name>
+        <url-pattern>/ServletRegistro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletActividad</servlet-name>
+        <url-pattern>/ServletActividad</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletServidoresCategorias</servlet-name>
+        <url-pattern>/ServletServidoresCategorias</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletActividadOp</servlet-name>
+        <url-pattern>/ServletActividadOp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletInformeSemanal</servlet-name>
+        <url-pattern>/ServletInformeSemanal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletInformeMensual</servlet-name>
+        <url-pattern>/ServletInformeMensual</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCargaMActividades</servlet-name>
+        <url-pattern>/ServletCargaMActividades</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
 </web-app>
