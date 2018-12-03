@@ -543,7 +543,7 @@
                                                     </label>
                                                     <label>
                                                         Contraseña:
-                                                        <input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0" name="contrasena"value="<%=emp.getContraseña()%>">
+                                                        <input type="search" class="form-control input-sm" placeholder="" aria-controls="DataTables_Table_0" name="contrasena"value="<%=emp.getContrasena()%>">
                                                     </label>
                                                     <%} else {%>
                                                     <label>

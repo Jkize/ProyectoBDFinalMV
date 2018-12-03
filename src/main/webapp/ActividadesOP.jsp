@@ -11,7 +11,7 @@
 
 <%
     HttpSession sesion = request.getSession();
-    Empleado emp1 = (Empleado)sesion.getAttribute("Admin");
+    Empleado emp1 = (Empleado)sesion.getAttribute("Operario");
     if( emp1 == null){
       response.sendRedirect("index.jsp");
     }else{ 
